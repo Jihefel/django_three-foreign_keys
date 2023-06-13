@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+        <li><a href={% url 'creer_utilisateur' %}>Créer utilisateur</a></li>
+        <li><a href={% url 'creer_projet' %}>Créer projet</a></li>
+        <li><a href={% url 'creer_tache' %}>Créer tâche</a></li>
+        <li><a href={% url 'liste_utilisateurs' %}>Liste des utilisateurs</a></li>
+        <li><a href={% url 'liste_projets' %}>Liste des projets</a></li>
+        <li><a href={% url 'liste_taches' %}>Liste des tâches</a></li>
+    </ul>
+{% endblock content %} 

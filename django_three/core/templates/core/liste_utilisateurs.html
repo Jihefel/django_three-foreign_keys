@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Liste des utilisateurs</h1>
+<ul>
+  {% for utilisateur in utilisateurs %}
+    <li><a href={% url 'utilisateur_details' utilisateur.id %}>{{ utilisateur }} - {{utilisateur.email}}</a></li>
+  {% empty %}
+    <li>Aucun utilisateur trouvé.</li>
+  {% endfor %}
+</ul>
+
+
+{% endblock content %}

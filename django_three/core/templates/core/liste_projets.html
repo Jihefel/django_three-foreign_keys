@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Liste des projets</h1>
+<ul>
+  {% for projet in projets %}
+    <li>{{ projet }} PAR {{projet.utilisateur}} </li>
+  {% empty %}
+    <li>Aucun projet trouvé.</li>
+  {% endfor %}
+</ul>
+
+
+{% endblock content %}

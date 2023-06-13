@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Détails de la tâche : {{tache.nom}}</h1>
+<p>Dépend du projet : "{{tache.projet}}" crééé par {{tache.projet.utilisateur}}</p>
+<ul>
+    <li>{{ tache.description }}</li>
+</ul>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Liste des tâches</h1>
+<ul>
+  {% for tache in taches %}
+    <li><a href={% url 'tache_details' tache.id %}>{{ tache }}</a></li>
+  {% empty %}
+    <li>Aucune tâche trouvée.</li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}
